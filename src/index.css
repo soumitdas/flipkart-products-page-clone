@@ -1,13 +1,169 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --font: "Roboto", sans-serif;
+
+  --font-size-normal: 1.4rem;
+
+  --blue: #2874f0;
+  --black: #212121;
+  --bg-color: #f1f3f6;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  object-fit: contain;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font);
+  font-size: var(--font-size-normal);
+  font-weight: 400;
+  color: var(--black);
+  background: var(--bg-color);
+  overflow-x: hidden;
+}
+
+input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.navbar {
+  height: 5.6rem;
+  background-color: var(--blue);
+}
+
+.navbar-brand {
+  color: white;
+  font-weight: 700;
+  font-size: 3rem;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.main-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.main-content-left {
+  flex-basis: 20%;
+  background-color: white;
+  margin: 1rem;
+  padding: 1.5rem;
+}
+
+.main-content-right {
+  /* flex-grow: 1; */
+  flex-basis: 80%;
+  background-color: white;
+  margin: 1rem;
+  padding: 1.5rem;
+}
+
+.content-title {
+  margin-bottom: 2rem;
+}
+
+.short-labels,
+.product-size-list,
+.filter-item-list {
+  list-style: none;
+  display: flex;
+  padding: 1rem 0;
+}
+
+.flex-align-center {
+  align-items: center;
+}
+
+.short-labels li:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.sort-link {
+  padding: 0.75rem;
+  cursor: pointer;
+}
+.sort-link:hover {
+  color: var(--blue);
+}
+
+.sort-link-active {
+  font-weight: 500;
+  color: var(--blue);
+  border-bottom: 0.2rem solid var(--blue);
+}
+
+.products-container {
+  --gap: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
+  width: calc(100% + var(--gap));
+  padding: 1rem 0;
+}
+
+.products-container > * {
+  margin: var(--gap) 0 0 var(--gap);
+}
+
+.product-card {
+  flex-basis: 20%;
+  /* width: 17rem; */
+  /* height: 30rem; */
+}
+
+.product-card img {
+  width: 100%;
+  height: 30rem;
+}
+
+.product-brand {
+  font-weight: 500;
+  color: #878787;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.product-title {
+  padding-bottom: 1rem;
+}
+
+.product-price {
+  font-size: 2rem;
+}
+.product-price::before {
+  content: "₹";
+}
+
+.product-size-list li:not(:last-child) {
+  margin-right: 0.75rem;
+}
+.product-size-list li:not(:last-child)::after {
+  content: ",";
+}
+
+.filter-item-title {
+  margin: 1rem 0;
+}
+
+.filter-item-list {
+  display: flex;
+  flex-direction: column;
+}
+.filter-item-list li:not(:last-child) {
+  margin-bottom: 1rem;
 }

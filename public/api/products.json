@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Striped Men Hooded Neck Red, Black T-Shirt",
+    "image": "https://rukminim1.flixcart.com/image/880/1056/kf1fo280hlty2aw-0/t-shirt/w/s/e/-original-imafdfvvr8hqdu65.jpeg?q=50",
+    "price": 269,
+    "sizes": ["S", "M", "L", "XL"],
+    "brand": "Helmont",
+    "idealFor": "Men"
+  },
+  {
+    "id": 2,
+    "name": "Typography Men Round Neck Maroon, Black T-Shirt",
+    "image": "https://rukminim1.flixcart.com/image/880/1056/kfoapow0-0/t-shirt/u/m/b/xl-nyc-maroon-smartees-original-imafw2gxu8brpkjx.jpeg?q=50",
+    "price": 216,
+    "sizes": ["L", "XL"],
+    "brand": "Smartees",
+    "idealFor": "Men"
+  },
+  {
+    "id": 3,
+    "name": "Striped Men Polo Neck White, Dark Blue, Dark Green T-Shirt",
+    "image": "https://rukminim1.flixcart.com/image/880/1056/kjkbv680-0/t-shirt/9/v/o/m-t285hs-as7whdngr-seven-rocks-original-imafz3wkfs8pevqc.jpeg?q=50",
+    "price": 248,
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "brand": "Seven Rocks",
+    "idealFor": "Men"
+  },
+  {
+    "id": 4,
+    "name": "Full Sleeve Printed Men Sweatshirt",
+    "image": "https://rukminim1.flixcart.com/image/880/1056/kit6hzk0/sweatshirt/k/w/y/s-tmrwmhdfulsweat-orgl-tripr-original-imafyggumwwuxhg7.jpeg?q=50",
+    "price": 451,
+    "sizes": ["M", "XL", "XXL"],
+    "brand": "Tripr",
+    "idealFor": "Men"
+  },
+  {
+    "id": 5,
+    "name": "Women Printed Cotton Rayon Blend Ethnic Dress",
+    "image": "https://rukminim1.flixcart.com/image/880/1056/k51cpe80/kurta/d/u/y/s-ku493ylo-mokshi-original-imafnta9sj4fjhwa.jpeg?q=50",
+    "price": 599,
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "brand": "Mokshi",
+    "idealFor": "Women"
+  },
+  {
+    "id": 6,
+    "name": "Women Printed Pure Cotton Straight Kurta",
+    "image": "https://rukminim1.flixcart.com/image/880/1056/k5wse4w0/kurta/f/h/u/m-kr196d-metro-fashion-original-imafzhqx7tpgbgca.jpeg?q=50",
+    "price": 291,
+    "sizes": ["S", "M", "L", "XL", "XXL", "3XL"],
+    "brand": "Metro Fashion",
+    "idealFor": "Women"
+  }
+]
