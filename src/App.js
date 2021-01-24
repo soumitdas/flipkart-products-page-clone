@@ -24,13 +24,19 @@ const App = () => {
       <div className="main-content">
         <div className="main-content-left">
           <h2 className="content-title">Filter</h2>
-          <FilterItem name="Size" list={sizes} handleFilter={handleSizes} />
-          <FilterItem name="Brand" list={brands} handleFilter={handleBrands} />
-          <FilterItem
-            name="Ideal For"
-            list={idealFor}
-            handleFilter={handleIdealFor}
-          />
+          <div className="main-content-left-filters">
+            <FilterItem name="Size" list={sizes} handleFilter={handleSizes} />
+            <FilterItem
+              name="Brand"
+              list={brands}
+              handleFilter={handleBrands}
+            />
+            <FilterItem
+              name="Ideal For"
+              list={idealFor}
+              handleFilter={handleIdealFor}
+            />
+          </div>
         </div>
         <div className="main-content-right">
           <h2>Clothing And Accessories</h2>

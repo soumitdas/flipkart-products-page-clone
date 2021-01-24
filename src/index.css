@@ -73,6 +73,23 @@ input[type="checkbox"] {
   padding: 1.5rem;
 }
 
+@media screen and (max-width: 900px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .main-content-left,
+  .main-content-right {
+    flex-basis: auto;
+  }
+
+  .main-content-left-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
 .content-title {
   margin-bottom: 2rem;
 }
