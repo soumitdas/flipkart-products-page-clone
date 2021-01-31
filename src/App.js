@@ -1,58 +1,36 @@
-import useProducts from "./hooks/useProducts";
-import FilterItem from "./components/FilterItem";
-import ProductCard from "./components/ProductCard";
-import SortItem from "./components/SortItem";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { useCart } from "./hooks/useCart";
+import CartView from "./views/Cart";
+import ProductsView from "./views/Products";
 
 const App = () => {
-  const {
-    products,
-    sortBy,
-    handleSort,
-    sizes,
-    handleSizes,
-    brands,
-    handleBrands,
-    idealFor,
-    handleIdealFor,
-  } = useProducts();
-
+  const { cart } = useCart();
   return (
-    <div>
+    <Router>
       <div className="navbar">
-        <div className="navbar-brand">Flip🙃kart</div>
+        <Link to="/" className="navbar-brand">
+          Flip🙃kart
+        </Link>
+        <Link className="btn btn-link-invert" to="/cart">
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86"
+              fill="#fff"
+            ></path>
+          </svg>{" "}
+          Cart {cart.length > 0 && `(${cart.length})`}
+        </Link>
       </div>
-      <div className="main-content">
-        <div className="main-content-left">
-          <h2 className="content-title">Filter</h2>
-          <div className="main-content-left-filters">
-            <FilterItem name="Size" list={sizes} handleFilter={handleSizes} />
-            <FilterItem
-              name="Brand"
-              list={brands}
-              handleFilter={handleBrands}
-            />
-            <FilterItem
-              name="Ideal For"
-              list={idealFor}
-              handleFilter={handleIdealFor}
-            />
-          </div>
-        </div>
-        <div className="main-content-right">
-          <h2>Clothing And Accessories</h2>
-          <SortItem sortBy={sortBy} handleSort={handleSort} />
-          {products.length > 0 ? (
-            <div className="products-container">
-              {products.map((product) => (
-                <ProductCard key={product.id} data={product} />
-              ))}
-            </div>
-          ) : (
-            <h2 style={{ textAlign: "center" }}>No Product Found</h2>
-          )}
-        </div>
-      </div>
-    </div>
+      <Switch>
+        <Route path="/cart" component={CartView} />
+        <Route path="/" component={ProductsView} />
+      </Switch>
+    </Router>
   );
 };
 
