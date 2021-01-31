@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Flipkart Cart Page Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Add to card and Save Later functionality implemented.
 
 ## Available Scripts
 
